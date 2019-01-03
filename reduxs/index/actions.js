@@ -1,8 +1,7 @@
-
 /*
  * action types
  */
-export const SOME_ACTION = 'SOME_ACTION'
+export const INIT_DATA = 'INIT_DATA'
 
 export const SOME_ACTION_PARAMS = 'SOME_ACTION_PARAMS'
 
@@ -10,12 +9,15 @@ export const SOME_ACTION_PARAMS = 'SOME_ACTION_PARAMS'
  * action creators
  */
 
-export const someDoAction = () => {
-    return {
-      type: SOME_ACTION,
-      data: {},
-    }
+export const initData = () => {
+  return {
+    type: INIT_DATA,
+    data: [
+      { id: '1', title: 'Hello world!' },
+      { id: '2', title: 'Hello Next!' },
+    ],
   }
+}
 
 export const someDoActionWithParams = params => {
   return {
@@ -23,5 +25,3 @@ export const someDoActionWithParams = params => {
     data: { ...params },
   }
 }
-
-

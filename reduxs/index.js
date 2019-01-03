@@ -1,8 +1,10 @@
 import { createStore } from 'redux'
-import App from './reducers'
+import rootReducer from './reducers'
 
-const store = createStore(App)
+export default () => {
+  const store = createStore(rootReducer)
 
-console.log(store.getState())
+  console.log(store.getState())
 
-export default store
+  return store
+}
